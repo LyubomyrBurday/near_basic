@@ -1,0 +1,6 @@
+framework module Pods_NearWallet_NearWalletUITests {
+  umbrella header "Pods-NearWallet-NearWalletUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

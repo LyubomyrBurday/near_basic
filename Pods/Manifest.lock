@@ -1,0 +1,40 @@
+PODS:
+  - AnyCodable-FlightSchool (0.6.5)
+  - Base58Swift (2.1.10):
+    - BigInt (~> 5.0.0)
+  - BigInt (5.0.0)
+  - KeychainAccess (4.2.2)
+  - nearclientios (1.0.29):
+    - AnyCodable-FlightSchool (~> 0.6.0)
+    - Base58Swift (~> 2.1.10)
+    - KeychainAccess (~> 4.2.2)
+    - secp256k1.swift
+    - TweetNacl (~> 1.0)
+  - secp256k1.swift (0.1.4)
+  - TweetNacl (1.0.2)
+
+DEPENDENCIES:
+  - nearclientios
+
+SPEC REPOS:
+  trunk:
+    - AnyCodable-FlightSchool
+    - Base58Swift
+    - BigInt
+    - KeychainAccess
+    - nearclientios
+    - secp256k1.swift
+    - TweetNacl
+
+SPEC CHECKSUMS:
+  AnyCodable-FlightSchool: 84b795a9d3ec7ba9e5488673d15cc1b37a566af4
+  Base58Swift: 53d551f0b33d9478fa63b3445e453a772d6b31a7
+  BigInt: 74b4d88367b0e819d9f77393549226d36faeb0d8
+  KeychainAccess: c0c4f7f38f6fc7bbe58f5702e25f7bd2f65abf51
+  nearclientios: 33b7eb8dd9305cd2ca8f95864c9402519b2c1ee5
+  secp256k1.swift: a7e7a214f6db6ce5db32cc6b2b45e5c4dd633634
+  TweetNacl: 3abf4d1d2082b0114e7a67410e300892448951e6
+
+PODFILE CHECKSUM: 202f938e6f62ec9c912b8cd95cbb2de9276571b7
+
+COCOAPODS: 1.11.3

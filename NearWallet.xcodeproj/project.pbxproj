@@ -1,0 +1,773 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		18C758FB7889289016B981BE /* Pods_NearWallet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 863CB9805F3C00F7C49E24EC /* Pods_NearWallet.framework */; };
+		233549464C76445450FC7ADB /* Pods_NearWallet_NearWalletUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47A5CA1C21F35762BE0A1B57 /* Pods_NearWallet_NearWalletUITests.framework */; };
+		4A7A643A9CFBFE8B36CFA696 /* Pods_NearWalletTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E7E5DA6F073261F8F477C8F /* Pods_NearWalletTests.framework */; };
+		C52962C728D730DC00DCBD0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52962C628D730DC00DCBD0B /* AppDelegate.swift */; };
+		C52962C928D730DC00DCBD0B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52962C828D730DC00DCBD0B /* SceneDelegate.swift */; };
+		C52962CB28D730DC00DCBD0B /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52962CA28D730DC00DCBD0B /* LoginVC.swift */; };
+		C52962CE28D730DC00DCBD0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C52962CC28D730DC00DCBD0B /* Main.storyboard */; };
+		C52962D028D730DD00DCBD0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C52962CF28D730DD00DCBD0B /* Assets.xcassets */; };
+		C52962D328D730DD00DCBD0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C52962D128D730DD00DCBD0B /* LaunchScreen.storyboard */; };
+		C52962DE28D730DD00DCBD0B /* NearWalletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52962DD28D730DD00DCBD0B /* NearWalletTests.swift */; };
+		C52962E828D730DD00DCBD0B /* NearWalletUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52962E728D730DD00DCBD0B /* NearWalletUITests.swift */; };
+		C52962EA28D730DD00DCBD0B /* NearWalletUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52962E928D730DD00DCBD0B /* NearWalletUITestsLaunchTests.swift */; };
+		C52962F728D7B6EB00DCBD0B /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52962F628D7B6EB00DCBD0B /* AppConstants.swift */; };
+		C52962FB28D7C25A00DCBD0B /* AccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52962FA28D7C25A00DCBD0B /* AccountVC.swift */; };
+		C52962FD28D8660700DCBD0B /* UIAlert+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52962FC28D8660700DCBD0B /* UIAlert+Extension.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C52962DA28D730DD00DCBD0B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C52962BB28D730DC00DCBD0B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C52962C228D730DC00DCBD0B;
+			remoteInfo = NearWallet;
+		};
+		C52962E428D730DD00DCBD0B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C52962BB28D730DC00DCBD0B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C52962C228D730DC00DCBD0B;
+			remoteInfo = NearWallet;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		172537BDC5E234F5B2DFFB3A /* Pods-NearWalletTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NearWalletTests.release.xcconfig"; path = "Target Support Files/Pods-NearWalletTests/Pods-NearWalletTests.release.xcconfig"; sourceTree = "<group>"; };
+		1AE6CD6CF8CBAB1D99E606B5 /* Pods-NearWallet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NearWallet.release.xcconfig"; path = "Target Support Files/Pods-NearWallet/Pods-NearWallet.release.xcconfig"; sourceTree = "<group>"; };
+		47A5CA1C21F35762BE0A1B57 /* Pods_NearWallet_NearWalletUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NearWallet_NearWalletUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		547FB6058964DE8B9B87955F /* Pods-NearWallet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NearWallet.debug.xcconfig"; path = "Target Support Files/Pods-NearWallet/Pods-NearWallet.debug.xcconfig"; sourceTree = "<group>"; };
+		7E7E5DA6F073261F8F477C8F /* Pods_NearWalletTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NearWalletTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		863CB9805F3C00F7C49E24EC /* Pods_NearWallet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NearWallet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC5CBB5A1F4C12DD78BBE469 /* Pods-NearWallet-NearWalletUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NearWallet-NearWalletUITests.release.xcconfig"; path = "Target Support Files/Pods-NearWallet-NearWalletUITests/Pods-NearWallet-NearWalletUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C52962C328D730DC00DCBD0B /* NearWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NearWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C52962C628D730DC00DCBD0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C52962C828D730DC00DCBD0B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C52962CA28D730DC00DCBD0B /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		C52962CD28D730DC00DCBD0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C52962CF28D730DD00DCBD0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C52962D228D730DD00DCBD0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C52962D428D730DD00DCBD0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C52962D928D730DD00DCBD0B /* NearWalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NearWalletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C52962DD28D730DD00DCBD0B /* NearWalletTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearWalletTests.swift; sourceTree = "<group>"; };
+		C52962E328D730DD00DCBD0B /* NearWalletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NearWalletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C52962E728D730DD00DCBD0B /* NearWalletUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearWalletUITests.swift; sourceTree = "<group>"; };
+		C52962E928D730DD00DCBD0B /* NearWalletUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearWalletUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C52962F628D7B6EB00DCBD0B /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		C52962FA28D7C25A00DCBD0B /* AccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountVC.swift; sourceTree = "<group>"; };
+		C52962FC28D8660700DCBD0B /* UIAlert+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlert+Extension.swift"; sourceTree = "<group>"; };
+		D8C5ED19E6ECA0F7F6C8B185 /* Pods-NearWallet-NearWalletUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NearWallet-NearWalletUITests.debug.xcconfig"; path = "Target Support Files/Pods-NearWallet-NearWalletUITests/Pods-NearWallet-NearWalletUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F7B4D738E8713D37A50BA635 /* Pods-NearWalletTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NearWalletTests.debug.xcconfig"; path = "Target Support Files/Pods-NearWalletTests/Pods-NearWalletTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C52962C028D730DC00DCBD0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18C758FB7889289016B981BE /* Pods_NearWallet.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C52962D628D730DD00DCBD0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A7A643A9CFBFE8B36CFA696 /* Pods_NearWalletTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C52962E028D730DD00DCBD0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				233549464C76445450FC7ADB /* Pods_NearWallet_NearWalletUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		75713A24D665DBE65A3F5271 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				547FB6058964DE8B9B87955F /* Pods-NearWallet.debug.xcconfig */,
+				1AE6CD6CF8CBAB1D99E606B5 /* Pods-NearWallet.release.xcconfig */,
+				D8C5ED19E6ECA0F7F6C8B185 /* Pods-NearWallet-NearWalletUITests.debug.xcconfig */,
+				AC5CBB5A1F4C12DD78BBE469 /* Pods-NearWallet-NearWalletUITests.release.xcconfig */,
+				F7B4D738E8713D37A50BA635 /* Pods-NearWalletTests.debug.xcconfig */,
+				172537BDC5E234F5B2DFFB3A /* Pods-NearWalletTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C52962BA28D730DC00DCBD0B = {
+			isa = PBXGroup;
+			children = (
+				C52962C528D730DC00DCBD0B /* NearWallet */,
+				C52962DC28D730DD00DCBD0B /* NearWalletTests */,
+				C52962E628D730DD00DCBD0B /* NearWalletUITests */,
+				C52962C428D730DC00DCBD0B /* Products */,
+				75713A24D665DBE65A3F5271 /* Pods */,
+				CCA428FAD8C17068AF026E9C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C52962C428D730DC00DCBD0B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C52962C328D730DC00DCBD0B /* NearWallet.app */,
+				C52962D928D730DD00DCBD0B /* NearWalletTests.xctest */,
+				C52962E328D730DD00DCBD0B /* NearWalletUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C52962C528D730DC00DCBD0B /* NearWallet */ = {
+			isa = PBXGroup;
+			children = (
+				C52962C628D730DC00DCBD0B /* AppDelegate.swift */,
+				C52962C828D730DC00DCBD0B /* SceneDelegate.swift */,
+				C52962CA28D730DC00DCBD0B /* LoginVC.swift */,
+				C52962CC28D730DC00DCBD0B /* Main.storyboard */,
+				C52962CF28D730DD00DCBD0B /* Assets.xcassets */,
+				C52962D128D730DD00DCBD0B /* LaunchScreen.storyboard */,
+				C52962D428D730DD00DCBD0B /* Info.plist */,
+				C52962F628D7B6EB00DCBD0B /* AppConstants.swift */,
+				C52962FA28D7C25A00DCBD0B /* AccountVC.swift */,
+				C52962FC28D8660700DCBD0B /* UIAlert+Extension.swift */,
+			);
+			path = NearWallet;
+			sourceTree = "<group>";
+		};
+		C52962DC28D730DD00DCBD0B /* NearWalletTests */ = {
+			isa = PBXGroup;
+			children = (
+				C52962DD28D730DD00DCBD0B /* NearWalletTests.swift */,
+			);
+			path = NearWalletTests;
+			sourceTree = "<group>";
+		};
+		C52962E628D730DD00DCBD0B /* NearWalletUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C52962E728D730DD00DCBD0B /* NearWalletUITests.swift */,
+				C52962E928D730DD00DCBD0B /* NearWalletUITestsLaunchTests.swift */,
+			);
+			path = NearWalletUITests;
+			sourceTree = "<group>";
+		};
+		CCA428FAD8C17068AF026E9C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				863CB9805F3C00F7C49E24EC /* Pods_NearWallet.framework */,
+				47A5CA1C21F35762BE0A1B57 /* Pods_NearWallet_NearWalletUITests.framework */,
+				7E7E5DA6F073261F8F477C8F /* Pods_NearWalletTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C52962C228D730DC00DCBD0B /* NearWallet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C52962ED28D730DD00DCBD0B /* Build configuration list for PBXNativeTarget "NearWallet" */;
+			buildPhases = (
+				089CFB052778020E5123DDC3 /* [CP] Check Pods Manifest.lock */,
+				C52962BF28D730DC00DCBD0B /* Sources */,
+				C52962C028D730DC00DCBD0B /* Frameworks */,
+				C52962C128D730DC00DCBD0B /* Resources */,
+				700058B57AD8AD49F920D905 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NearWallet;
+			productName = NearWallet;
+			productReference = C52962C328D730DC00DCBD0B /* NearWallet.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C52962D828D730DD00DCBD0B /* NearWalletTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C52962F028D730DD00DCBD0B /* Build configuration list for PBXNativeTarget "NearWalletTests" */;
+			buildPhases = (
+				EB172AA83721231E7530C4F5 /* [CP] Check Pods Manifest.lock */,
+				C52962D528D730DD00DCBD0B /* Sources */,
+				C52962D628D730DD00DCBD0B /* Frameworks */,
+				C52962D728D730DD00DCBD0B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C52962DB28D730DD00DCBD0B /* PBXTargetDependency */,
+			);
+			name = NearWalletTests;
+			productName = NearWalletTests;
+			productReference = C52962D928D730DD00DCBD0B /* NearWalletTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C52962E228D730DD00DCBD0B /* NearWalletUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C52962F328D730DD00DCBD0B /* Build configuration list for PBXNativeTarget "NearWalletUITests" */;
+			buildPhases = (
+				A90F8E04DB897510BCF568E4 /* [CP] Check Pods Manifest.lock */,
+				C52962DF28D730DD00DCBD0B /* Sources */,
+				C52962E028D730DD00DCBD0B /* Frameworks */,
+				C52962E128D730DD00DCBD0B /* Resources */,
+				B570BE81AEE84C1C97B2F027 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C52962E528D730DD00DCBD0B /* PBXTargetDependency */,
+			);
+			name = NearWalletUITests;
+			productName = NearWalletUITests;
+			productReference = C52962E328D730DD00DCBD0B /* NearWalletUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C52962BB28D730DC00DCBD0B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					C52962C228D730DC00DCBD0B = {
+						CreatedOnToolsVersion = 14.0;
+					};
+					C52962D828D730DD00DCBD0B = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = C52962C228D730DC00DCBD0B;
+					};
+					C52962E228D730DD00DCBD0B = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = C52962C228D730DC00DCBD0B;
+					};
+				};
+			};
+			buildConfigurationList = C52962BE28D730DC00DCBD0B /* Build configuration list for PBXProject "NearWallet" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C52962BA28D730DC00DCBD0B;
+			productRefGroup = C52962C428D730DC00DCBD0B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C52962C228D730DC00DCBD0B /* NearWallet */,
+				C52962D828D730DD00DCBD0B /* NearWalletTests */,
+				C52962E228D730DD00DCBD0B /* NearWalletUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C52962C128D730DC00DCBD0B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C52962D328D730DD00DCBD0B /* LaunchScreen.storyboard in Resources */,
+				C52962D028D730DD00DCBD0B /* Assets.xcassets in Resources */,
+				C52962CE28D730DC00DCBD0B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C52962D728D730DD00DCBD0B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C52962E128D730DD00DCBD0B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		089CFB052778020E5123DDC3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NearWallet-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		700058B57AD8AD49F920D905 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NearWallet/Pods-NearWallet-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NearWallet/Pods-NearWallet-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NearWallet/Pods-NearWallet-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A90F8E04DB897510BCF568E4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NearWallet-NearWalletUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B570BE81AEE84C1C97B2F027 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NearWallet-NearWalletUITests/Pods-NearWallet-NearWalletUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NearWallet-NearWalletUITests/Pods-NearWallet-NearWalletUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NearWallet-NearWalletUITests/Pods-NearWallet-NearWalletUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB172AA83721231E7530C4F5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NearWalletTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C52962BF28D730DC00DCBD0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C52962FD28D8660700DCBD0B /* UIAlert+Extension.swift in Sources */,
+				C52962CB28D730DC00DCBD0B /* LoginVC.swift in Sources */,
+				C52962FB28D7C25A00DCBD0B /* AccountVC.swift in Sources */,
+				C52962C728D730DC00DCBD0B /* AppDelegate.swift in Sources */,
+				C52962C928D730DC00DCBD0B /* SceneDelegate.swift in Sources */,
+				C52962F728D7B6EB00DCBD0B /* AppConstants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C52962D528D730DD00DCBD0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C52962DE28D730DD00DCBD0B /* NearWalletTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C52962DF28D730DD00DCBD0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C52962E828D730DD00DCBD0B /* NearWalletUITests.swift in Sources */,
+				C52962EA28D730DD00DCBD0B /* NearWalletUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C52962DB28D730DD00DCBD0B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C52962C228D730DC00DCBD0B /* NearWallet */;
+			targetProxy = C52962DA28D730DD00DCBD0B /* PBXContainerItemProxy */;
+		};
+		C52962E528D730DD00DCBD0B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C52962C228D730DC00DCBD0B /* NearWallet */;
+			targetProxy = C52962E428D730DD00DCBD0B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C52962CC28D730DC00DCBD0B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C52962CD28D730DC00DCBD0B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C52962D128D730DD00DCBD0B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C52962D228D730DD00DCBD0B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C52962EB28D730DD00DCBD0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C52962EC28D730DD00DCBD0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C52962EE28D730DD00DCBD0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 547FB6058964DE8B9B87955F /* Pods-NearWallet.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VVKMMDN3VH;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NearWallet/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lb.NearWallet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C52962EF28D730DD00DCBD0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AE6CD6CF8CBAB1D99E606B5 /* Pods-NearWallet.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VVKMMDN3VH;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NearWallet/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lb.NearWallet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C52962F128D730DD00DCBD0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7B4D738E8713D37A50BA635 /* Pods-NearWalletTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VVKMMDN3VH;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lb.NearWalletTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NearWallet.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NearWallet";
+			};
+			name = Debug;
+		};
+		C52962F228D730DD00DCBD0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 172537BDC5E234F5B2DFFB3A /* Pods-NearWalletTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VVKMMDN3VH;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lb.NearWalletTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NearWallet.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NearWallet";
+			};
+			name = Release;
+		};
+		C52962F428D730DD00DCBD0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8C5ED19E6ECA0F7F6C8B185 /* Pods-NearWallet-NearWalletUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VVKMMDN3VH;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lb.NearWalletUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NearWallet;
+			};
+			name = Debug;
+		};
+		C52962F528D730DD00DCBD0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC5CBB5A1F4C12DD78BBE469 /* Pods-NearWallet-NearWalletUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VVKMMDN3VH;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lb.NearWalletUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NearWallet;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C52962BE28D730DC00DCBD0B /* Build configuration list for PBXProject "NearWallet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C52962EB28D730DD00DCBD0B /* Debug */,
+				C52962EC28D730DD00DCBD0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C52962ED28D730DD00DCBD0B /* Build configuration list for PBXNativeTarget "NearWallet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C52962EE28D730DD00DCBD0B /* Debug */,
+				C52962EF28D730DD00DCBD0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C52962F028D730DD00DCBD0B /* Build configuration list for PBXNativeTarget "NearWalletTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C52962F128D730DD00DCBD0B /* Debug */,
+				C52962F228D730DD00DCBD0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C52962F328D730DD00DCBD0B /* Build configuration list for PBXNativeTarget "NearWalletUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C52962F428D730DD00DCBD0B /* Debug */,
+				C52962F528D730DD00DCBD0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C52962BB28D730DC00DCBD0B /* Project object */;
+}
