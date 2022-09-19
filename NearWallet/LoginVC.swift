@@ -49,7 +49,7 @@ class LoginVC: UIViewController, WalletSignInDelegate {
     private func setupUI(with wallet: WalletAccount) async {
       if await wallet.isSignedIn() {
         await MainActor.run {
-          showAccountState(with: wallet)
+            showAccountState(with: wallet)
         }
       } else {
         // Можна ховати Loader
@@ -62,7 +62,6 @@ class LoginVC: UIViewController, WalletSignInDelegate {
             try! await walletAccount!.requestSignIn(contractId: nil, title: GLOBAL.appName, presentingViewController: self)
         }
     }
-    
     
     private func showAccountState(with wallet: WalletAccount) {
       guard let accountVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AccountVC") as? AccountVC else {

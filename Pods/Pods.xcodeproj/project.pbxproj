@@ -411,7 +411,7 @@
 		72062EF1BF4C5776AEFC5BE579D625A8 /* SHA256.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SHA256.swift; path = nearclientios/Sources/Utils/SHA256.swift; sourceTree = "<group>"; };
 		72A518E71D173C0BC51406B538788F2E /* ecmult_gen_impl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ecmult_gen_impl.h; path = secp256k1/Classes/secp256k1/src/ecmult_gen_impl.h; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		73ECF8CB0772DE0B8C98D2E0B9B82A2E /* lax_der_parsing.c */ = {isa = PBXFileReference; includeInIndex = 1; name = lax_der_parsing.c; path = secp256k1/Classes/secp256k1/contrib/lax_der_parsing.c; sourceTree = "<group>"; };
+		73ECF8CB0772DE0B8C98D2E0B9B82A2E /* lax_der_parsing.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = lax_der_parsing.c; path = secp256k1/Classes/secp256k1/contrib/lax_der_parsing.c; sourceTree = "<group>"; };
 		776113FB93732C16A2147408BDE1364D /* Subtraction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Subtraction.swift; path = Sources/Subtraction.swift; sourceTree = "<group>"; };
 		779E6B96FD9499A9AFB61CCE03DBC370 /* Pods-NearWalletTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NearWalletTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		78227AFBB9339C1B3F5B972B7F592A65 /* secp256k1_ec_mult_static_context.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = secp256k1_ec_mult_static_context.h; path = secp256k1/Classes/secp256k1_ec_mult_static_context.h; sourceTree = "<group>"; };
@@ -421,7 +421,7 @@
 		7ED41CFB9C073D5E1D2E8A67752223F8 /* nearclientios-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "nearclientios-prefix.pch"; sourceTree = "<group>"; };
 		7FCBF05C1F2D3667182C8C0E0A5E8F8D /* BigInt-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "BigInt-Info.plist"; sourceTree = "<group>"; };
 		807610B41A6CB30CEF1356475EAE162A /* scalar_8x32_impl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = scalar_8x32_impl.h; path = secp256k1/Classes/secp256k1/src/scalar_8x32_impl.h; sourceTree = "<group>"; };
-		8230BBFAE0DB4C27EE250D1B9712E632 /* lax_der_privatekey_parsing.c */ = {isa = PBXFileReference; includeInIndex = 1; name = lax_der_privatekey_parsing.c; path = secp256k1/Classes/secp256k1/contrib/lax_der_privatekey_parsing.c; sourceTree = "<group>"; };
+		8230BBFAE0DB4C27EE250D1B9712E632 /* lax_der_privatekey_parsing.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = lax_der_privatekey_parsing.c; path = secp256k1/Classes/secp256k1/contrib/lax_der_privatekey_parsing.c; sourceTree = "<group>"; };
 		84D5D7AE7CF480E35E9B570C315AC152 /* Multiplication.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Multiplication.swift; path = Sources/Multiplication.swift; sourceTree = "<group>"; };
 		87594C5DAAD97293162A9623D4ECA55C /* Signer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Signer.swift; path = nearclientios/Sources/Signer.swift; sourceTree = "<group>"; };
 		876AE191FDF10F2D1B7130DAE31A59E0 /* TweetNacl-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TweetNacl-dummy.m"; sourceTree = "<group>"; };
@@ -439,7 +439,7 @@
 		9929C92C4FB0E687FAD76AC2005A8603 /* TweetNacl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TweetNacl.swift; path = Sources/TweetNacl/TweetNacl.swift; sourceTree = "<group>"; };
 		9D1B1C9FA95BDE3EC017C3C86F4D4B8C /* field_5x52_asm_impl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = field_5x52_asm_impl.h; path = secp256k1/Classes/secp256k1/src/field_5x52_asm_impl.h; sourceTree = "<group>"; };
 		9D8FDA5588787A6E3918723CE6BF8529 /* nearclientios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = nearclientios.debug.xcconfig; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DCF364253A345F75593DB085B39F3FF /* BigInt.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BigInt.modulemap; sourceTree = "<group>"; };
 		9E497B577CFA9DE5A5F0CC6A7F67EB5F /* Pods-NearWalletTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NearWalletTests-umbrella.h"; sourceTree = "<group>"; };
 		9FD82402488D7F8C74BCD015A6E41135 /* secp256k1_main.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = secp256k1_main.h; path = secp256k1/Classes/secp256k1_main.h; sourceTree = "<group>"; };
@@ -501,10 +501,10 @@
 		E8EE7F078656FABB8F6821D10FF994BB /* KeychainAccess */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KeychainAccess; path = KeychainAccess.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB4C38EC507C6F4884C04D68FC1CF02E /* eckey_impl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = eckey_impl.h; path = secp256k1/Classes/secp256k1/src/eckey_impl.h; sourceTree = "<group>"; };
 		EB84280F23C4780A215640A17C80EBED /* field_5x52_int128_impl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = field_5x52_int128_impl.h; path = secp256k1/Classes/secp256k1/src/field_5x52_int128_impl.h; sourceTree = "<group>"; };
-		EF7DC58B823714679AC836160C404F50 /* ctweetnacl.c */ = {isa = PBXFileReference; includeInIndex = 1; name = ctweetnacl.c; path = Sources/CTweetNacl/ctweetnacl.c; sourceTree = "<group>"; };
+		EF7DC58B823714679AC836160C404F50 /* ctweetnacl.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = ctweetnacl.c; path = Sources/CTweetNacl/ctweetnacl.c; sourceTree = "<group>"; };
 		F17F28A402357769306CD356D67AB369 /* ecmult_gen.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ecmult_gen.h; path = secp256k1/Classes/secp256k1/src/ecmult_gen.h; sourceTree = "<group>"; };
 		F55C6E8E13EB2DB988397D1A58588FF1 /* Strideable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Strideable.swift; path = Sources/Strideable.swift; sourceTree = "<group>"; };
-		F7BCFC3D081FB0016D5065EFFDDBE055 /* secp256k1.c */ = {isa = PBXFileReference; includeInIndex = 1; name = secp256k1.c; path = secp256k1/Classes/secp256k1/src/secp256k1.c; sourceTree = "<group>"; };
+		F7BCFC3D081FB0016D5065EFFDDBE055 /* secp256k1.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = secp256k1.c; path = secp256k1/Classes/secp256k1/src/secp256k1.c; sourceTree = "<group>"; };
 		F7CADA2872D438F643E69CF3EFC60EC0 /* Transaction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Transaction.swift; path = nearclientios/Sources/Transaction.swift; sourceTree = "<group>"; };
 		F92AAF4632502B351BD6C0C3E7C052E2 /* Pods-NearWallet-NearWalletUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NearWallet-NearWalletUITests-umbrella.h"; sourceTree = "<group>"; };
 		FA53B9051C25079D54300010F613A48D /* Pods-NearWalletTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NearWalletTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -663,7 +663,6 @@
 				6E59B20908021B03DB811B8D09B53249 /* AnyEncodable.swift */,
 				64557462B7175128C661EA7E6D2D7A01 /* Support Files */,
 			);
-			name = "AnyCodable-FlightSchool";
 			path = "AnyCodable-FlightSchool";
 			sourceTree = "<group>";
 		};
@@ -700,7 +699,6 @@
 				9929C92C4FB0E687FAD76AC2005A8603 /* TweetNacl.swift */,
 				804E8D333B795F9CC66073EC4E4A619A /* Support Files */,
 			);
-			name = TweetNacl;
 			path = TweetNacl;
 			sourceTree = "<group>";
 		};
@@ -725,7 +723,6 @@
 				1DD2217066A4BEDFD7EA42E818C1C9BC /* Base58.swift */,
 				FE9859E331D6E30C9BCA79B859C43189 /* Support Files */,
 			);
-			name = Base58Swift;
 			path = Base58Swift;
 			sourceTree = "<group>";
 		};
@@ -750,7 +747,6 @@
 				6EA1699D0F1A144F9475185DAF53B657 /* Keychain.swift */,
 				9A6BB3A169A001ECEC53C3076667754F /* Support Files */,
 			);
-			name = KeychainAccess;
 			path = KeychainAccess;
 			sourceTree = "<group>";
 		};
@@ -811,7 +807,6 @@
 				121A2C335E353E126062338149593DF6 /* Web.swift */,
 				054F825E50C7446DB61D14D24DBAD2B7 /* Support Files */,
 			);
-			name = nearclientios;
 			path = nearclientios;
 			sourceTree = "<group>";
 		};
@@ -886,7 +881,6 @@
 				1042E3969C9C0EC1D67FF662AFFABFB3 /* util.h */,
 				F3F235ED8F10DD6939D16C0A32CE0F8A /* Support Files */,
 			);
-			name = secp256k1.swift;
 			path = secp256k1.swift;
 			sourceTree = "<group>";
 		};
@@ -917,7 +911,6 @@
 				BBEAF075C0298C2E4853E923F8DD6F1F /* Words and Bits.swift */,
 				B7E52F68EF0095CA0BDE3A7514D5CDBD /* Support Files */,
 			);
-			name = BigInt;
 			path = BigInt;
 			sourceTree = "<group>";
 		};

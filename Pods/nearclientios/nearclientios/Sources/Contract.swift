@@ -35,9 +35,15 @@ public extension ChangeMethod {
 }
 
 public struct ContractOptions: ContractOptionsProtocol {
-  public let viewMethods: [ViewMethod]
-  public let changeMethods: [ChangeMethod]
-  public let sender: String?
+    public let viewMethods: [ViewMethod]
+    public let changeMethods: [ChangeMethod]
+    public let sender: String?
+    
+    public init (viewMethods: [ViewMethod], changeMethods: [ChangeMethod], sender: String?) {
+        self.viewMethods = viewMethods
+        self.changeMethods = changeMethods
+        self.sender = sender
+    }
 }
 
 public struct Contract {
@@ -47,6 +53,7 @@ public struct Contract {
   let changeMethods: [ChangeMethod]
   let sender: String?
 }
+
 
 public extension Contract {
   init(account: Account, contractId: String, options:  ContractOptionsProtocol) {

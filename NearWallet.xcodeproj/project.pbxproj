@@ -22,6 +22,7 @@
 		C52962F728D7B6EB00DCBD0B /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52962F628D7B6EB00DCBD0B /* AppConstants.swift */; };
 		C52962FB28D7C25A00DCBD0B /* AccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52962FA28D7C25A00DCBD0B /* AccountVC.swift */; };
 		C52962FD28D8660700DCBD0B /* UIAlert+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52962FC28D8660700DCBD0B /* UIAlert+Extension.swift */; };
+		C529630028D8B52200DCBD0B /* main.wasm in Resources */ = {isa = PBXBuildFile; fileRef = C52962FF28D8B52200DCBD0B /* main.wasm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		C52962F628D7B6EB00DCBD0B /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		C52962FA28D7C25A00DCBD0B /* AccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountVC.swift; sourceTree = "<group>"; };
 		C52962FC28D8660700DCBD0B /* UIAlert+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlert+Extension.swift"; sourceTree = "<group>"; };
+		C52962FF28D8B52200DCBD0B /* main.wasm */ = {isa = PBXFileReference; lastKnownFileType = file; path = main.wasm; sourceTree = "<group>"; };
 		D8C5ED19E6ECA0F7F6C8B185 /* Pods-NearWallet-NearWalletUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NearWallet-NearWalletUITests.debug.xcconfig"; path = "Target Support Files/Pods-NearWallet-NearWalletUITests/Pods-NearWallet-NearWalletUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F7B4D738E8713D37A50BA635 /* Pods-NearWalletTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NearWalletTests.debug.xcconfig"; path = "Target Support Files/Pods-NearWalletTests/Pods-NearWalletTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -135,6 +137,7 @@
 		C52962C528D730DC00DCBD0B /* NearWallet */ = {
 			isa = PBXGroup;
 			children = (
+				C52962FF28D8B52200DCBD0B /* main.wasm */,
 				C52962C628D730DC00DCBD0B /* AppDelegate.swift */,
 				C52962C828D730DC00DCBD0B /* SceneDelegate.swift */,
 				C52962CA28D730DC00DCBD0B /* LoginVC.swift */,
@@ -285,6 +288,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C529630028D8B52200DCBD0B /* main.wasm in Resources */,
 				C52962D328D730DD00DCBD0B /* LaunchScreen.storyboard in Resources */,
 				C52962D028D730DD00DCBD0B /* Assets.xcassets in Resources */,
 				C52962CE28D730DC00DCBD0B /* Main.storyboard in Resources */,
