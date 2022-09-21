@@ -90,42 +90,68 @@
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Кількість монет" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D8a-Qd-eQE">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Кількість NEAR монет" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D8a-Qd-eQE">
                                 <rect key="frame" x="20" y="701.33333333333337" width="350" height="18.666666666666629"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4DJ-1c-VyR">
-                                <rect key="frame" x="20" y="592.66666666666663" width="350" height="50"/>
-                                <color key="backgroundColor" red="0.97647058959999999" green="0.97647058959999999" blue="0.97647058959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <rect key="frame" x="20" y="219.66666666666666" width="350" height="49.999999999999972"/>
+                                <color key="backgroundColor" red="0.94117647410000005" green="0.94117647410000005" blue="0.94509804249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="5bd-lT-WGC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Виконати тестові запити"/>
+                                <state key="normal" title="Створити СМ та відповісти"/>
                                 <connections>
                                     <action selector="touchUpMakeContractRequests:" destination="pCL-GJ-pvt" eventType="touchUpInside" id="Vz6-Pu-KhO"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKN-Mp-T6K">
+                                <rect key="frame" x="20" y="289.66666666666669" width="350" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lblQuestion" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56p-pW-v0s">
+                                <rect key="frame" x="20" y="143" width="350" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Відповідь" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SRL-Of-5PF">
+                                <rect key="frame" x="20" y="181" width="350" height="18.666666666666657"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2iF-GF-iko"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="56p-pW-v0s" firstAttribute="leading" secondItem="2iF-GF-iko" secondAttribute="leading" constant="20" id="0bX-2f-OPs"/>
+                            <constraint firstItem="PKN-Mp-T6K" firstAttribute="leading" secondItem="2iF-GF-iko" secondAttribute="leading" constant="20" id="1aZ-PA-iOj"/>
+                            <constraint firstItem="2iF-GF-iko" firstAttribute="trailing" secondItem="PKN-Mp-T6K" secondAttribute="trailing" constant="20" id="2Yo-j6-Y7F"/>
                             <constraint firstItem="ug2-XK-naE" firstAttribute="leading" secondItem="2iF-GF-iko" secondAttribute="leading" constant="20" id="2gv-0J-Bpa"/>
                             <constraint firstItem="D8a-Qd-eQE" firstAttribute="leading" secondItem="2iF-GF-iko" secondAttribute="leading" constant="20" id="6Ih-P9-hBz"/>
                             <constraint firstItem="ug2-XK-naE" firstAttribute="top" secondItem="D8a-Qd-eQE" secondAttribute="bottom" constant="20" id="6Py-MM-MCj"/>
                             <constraint firstItem="2iF-GF-iko" firstAttribute="trailing" secondItem="Ehf-R5-MT4" secondAttribute="trailing" constant="20" id="6qo-AP-MS1"/>
                             <constraint firstItem="2iF-GF-iko" firstAttribute="trailing" secondItem="4DJ-1c-VyR" secondAttribute="trailing" constant="20" id="CX8-8o-Tcp"/>
+                            <constraint firstItem="2iF-GF-iko" firstAttribute="trailing" secondItem="SRL-Of-5PF" secondAttribute="trailing" constant="20" id="Dw2-94-Oir"/>
                             <constraint firstItem="D8a-Qd-eQE" firstAttribute="top" secondItem="keQ-dA-jJc" secondAttribute="bottom" constant="20" id="EPE-Zf-PO7"/>
                             <constraint firstItem="keQ-dA-jJc" firstAttribute="leading" secondItem="2iF-GF-iko" secondAttribute="leading" constant="20" id="FPS-sx-AHu"/>
                             <constraint firstItem="2iF-GF-iko" firstAttribute="trailing" secondItem="ug2-XK-naE" secondAttribute="trailing" constant="20" id="LXX-Bh-1Uv"/>
                             <constraint firstItem="2iF-GF-iko" firstAttribute="trailing" secondItem="keQ-dA-jJc" secondAttribute="trailing" constant="20" id="Mph-bF-eGm"/>
                             <constraint firstItem="2iF-GF-iko" firstAttribute="bottom" secondItem="ug2-XK-naE" secondAttribute="bottom" constant="20" id="VbF-4p-nc2"/>
-                            <constraint firstItem="keQ-dA-jJc" firstAttribute="top" secondItem="4DJ-1c-VyR" secondAttribute="bottom" constant="20" id="Vvh-dn-gwl"/>
+                            <constraint firstItem="SRL-Of-5PF" firstAttribute="leading" secondItem="2iF-GF-iko" secondAttribute="leading" constant="20" id="a8b-Qc-Ect"/>
+                            <constraint firstItem="SRL-Of-5PF" firstAttribute="top" secondItem="56p-pW-v0s" secondAttribute="bottom" constant="20" id="bAD-Yh-1Vm"/>
+                            <constraint firstItem="4DJ-1c-VyR" firstAttribute="top" secondItem="SRL-Of-5PF" secondAttribute="bottom" constant="20" id="eL8-57-FCM"/>
                             <constraint firstItem="4DJ-1c-VyR" firstAttribute="leading" secondItem="2iF-GF-iko" secondAttribute="leading" constant="20" id="hAB-gQ-SnV"/>
+                            <constraint firstItem="56p-pW-v0s" firstAttribute="top" secondItem="Ehf-R5-MT4" secondAttribute="bottom" constant="20" id="hAQ-Xw-CeZ"/>
                             <constraint firstItem="2iF-GF-iko" firstAttribute="trailing" secondItem="D8a-Qd-eQE" secondAttribute="trailing" constant="20" id="k4q-fF-eCh"/>
+                            <constraint firstItem="2iF-GF-iko" firstAttribute="trailing" secondItem="56p-pW-v0s" secondAttribute="trailing" constant="20" id="mhc-G2-S3T"/>
                             <constraint firstItem="aoF-M0-6aP" firstAttribute="leading" secondItem="2iF-GF-iko" secondAttribute="leading" constant="20" id="neF-kW-sSd"/>
+                            <constraint firstItem="PKN-Mp-T6K" firstAttribute="top" secondItem="4DJ-1c-VyR" secondAttribute="bottom" constant="20" id="oYC-bQ-n2W"/>
                             <constraint firstItem="Ehf-R5-MT4" firstAttribute="leading" secondItem="2iF-GF-iko" secondAttribute="leading" constant="20" id="plI-PG-tyQ"/>
                             <constraint firstItem="Ehf-R5-MT4" firstAttribute="top" secondItem="aoF-M0-6aP" secondAttribute="bottom" constant="20" id="qIu-5H-TfZ"/>
                             <constraint firstItem="aoF-M0-6aP" firstAttribute="top" secondItem="2iF-GF-iko" secondAttribute="top" constant="20" id="ri9-XP-4HU"/>
@@ -134,7 +160,10 @@
                     </view>
                     <connections>
                         <outlet property="amountTextField" destination="D8a-Qd-eQE" id="mfM-oi-vZP"/>
+                        <outlet property="answerTextField" destination="SRL-Of-5PF" id="Wjo-fV-j2q"/>
                         <outlet property="lblAccountBalance" destination="aoF-M0-6aP" id="44T-BI-hpC"/>
+                        <outlet property="lblCreatedSM" destination="PKN-Mp-T6K" id="3Cr-iI-mj0"/>
+                        <outlet property="lblQuestion" destination="56p-pW-v0s" id="QMW-ya-DmA"/>
                         <outlet property="lblTotalStackedBalance" destination="Ehf-R5-MT4" id="M2y-qR-vxe"/>
                         <outlet property="recieverTextField" destination="keQ-dA-jJc" id="cIR-TA-3TV"/>
                     </connections>

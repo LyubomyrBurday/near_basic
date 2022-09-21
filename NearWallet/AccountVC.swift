@@ -11,23 +11,139 @@ import nearclientios
 
 class AccountVC: UIViewController {
     
+    let AMOUNT_FOR_TESTING = UInt128(stringLiteral: "10000000000000000000000000")
+    
     @IBOutlet weak var lblAccountBalance: UILabel!
     @IBOutlet weak var lblTotalStackedBalance: UILabel!
     @IBOutlet weak var recieverTextField: UITextField!
     @IBOutlet weak var amountTextField: UITextField!
+    @IBOutlet weak var lblCreatedSM: UILabel!
+    @IBOutlet weak var lblQuestion: UILabel!
+    @IBOutlet weak var answerTextField: UITextField!
     
     private var walletAccount: WalletAccount?
     private var near: Near?
     private var accountState: AccountState?
     private var account: Account!
+    
+    
     private var contract: Contract!
+    private var contractId: String!
+    
+    var questions: [String] = ["2 + 2 = ?", "1 + 4 = ?", "10 + 4 = ?", "2 + 2 = ?"]
     
     override func viewDidLoad(){
         super.viewDidLoad()
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Вихід", style: UIBarButtonItem.Style.plain, target: self, action: #selector(AccountVC.backWithLogout(sender:)))
+        updateAccountData()
+    }
+    
+    func setup(near: Near, wallet: WalletAccount) {
+      self.near = near
+      walletAccount = wallet
+    }
+    
+    func updateAccountData(){
         Task {
             accountState = try await fetchAccountState()
             await setupData(with: accountState!, account: account)
+            // Створення смарт контракту, даний блок використовується для демонстрації створення смарт контракту та подальшої взаємодії з ним
+            try await contractSetup()
+        }
+    }
+    
+    private func setupData(with accountState: AccountState, account: Account) async {
+        lblAccountBalance.text = try! await "Баланс профілю: \(account.getAccountBalance().available.toNearAmount(fracDigits: 5)) Ⓝ"
+        lblTotalStackedBalance.text = try! await "Стейкінг баланс: \(account.getAccountBalance().staked)"
+        lblQuestion.text = questions[Int.random(in: 0..<4)]
+    }
+    
+    // Отримуємо актуальну інформацію про профіль користувача
+    private func fetchAccountState() async throws -> AccountState {
+        do {
+            account = try await near!.account(accountId: walletAccount!.getAccountId())
+            return try await account.state()
+        } catch {
+            throw AccountError.cannotFetchAccountState
+        }
+    }
+    
+    // Створюємо смарт контракт з підключенням PubliKey, який за необхідності можна перегенерувати.
+    private func contractSetup() async throws {
+        contractId = generateUniqueString(prefix: "test_contract")
+        
+        // Приклад генерування нового PublicKey
+        // let newPublicKey = try await near!.connection.signer.createKey(accountId: account.accountId, networkId: account.connection.networkId, curve: .ED25519)
+        
+        guard let myKey = try await near!.connection.signer.getPublicKey(accountId: account.accountId, networkId: account.connection.networkId) else {
+            print("Втрачений ключ \(account.accountId) в \(account.connection.networkId)")
+          return
+        }
+
+        try await account.createAndDeployContract(contractId: contractId, publicKey: myKey, data: Wasm().data.bytes, amount: AMOUNT_FOR_TESTING)
+        let options = ContractOptions(viewMethods: [.hello, .getValue, .getAllKeys, .returnHiWithLogs], changeMethods: [.setValue, .generateLogs, .triggerAssert, .testSetRemove], sender: nil)
+        contract = Contract(account: account, contractId: contractId, options: options)
+        try await makeFunctionCallViaAccount()
+    }
+    
+    // Здійснення викликів методів account.viewFunction() та account.functionCall()
+    private func makeFunctionCallViaAccount() async throws {
+        let result: String = try await account.viewFunction(contractId: contractId, methodName: .hello, args: ["name": "trex"])
+        let result2 = try await account.functionCall(contractId: contractId, methodName: .setValue, args: ["value": generateUniqueString(prefix: "iPhone 14")], amount: 1)
+        let viewResult: String = try await account.viewFunction(contractId: contractId, methodName: .getValue, args: [:])
+        print("makeFunctionCallViaAccount: account.viewFunction - \(result)")
+        print("makeFunctionCallViaAccount: account.functionCall - \(result2)")
+        print("makeFunctionCallViaAccount: account.viewFunction - \(viewResult)")
+        
+        try await testMakeFunctionCallsViaAccountWithGas()
+    }
+    
+    // Здійснення виклику методів contract.view(), contract.change() та додатковим параметром Gas
+    private func testMakeFunctionCallsViaAccountWithGas() async throws {
+        let result: String = try await contract.view(methodName: .hello, args: ["name": "world"])
+        let result2 = try await contract.change(methodName: .setValue, args: ["value": generateUniqueString(prefix: "iPhone 14"), "amount": 5] , gas: 1000000 * 1000000)
+        let viewResult: String = try await contract.view(methodName: .getValue)
+        print("testMakeFunctionCallsViaAccountWithGas: account.viewFunction - \(result)")
+        print("testMakeFunctionCallsViaAccountWithGas: account.functionCall - \(String(describing: result2))")
+        print("testMakeFunctionCallsViaAccountWithGas: account.viewFunction - \(viewResult)")
+    }
+    
+    @IBAction func touchUpMakeContractRequests(_ sender: UIButton) {
+        Task {
+            do {
+                try await contract.change(methodName: .setValue, args: ["question": lblQuestion.text! ,"value": answerTextField.text!], amount: convertToYoctoNears(nears: 0.1))
+                let viewResult: String = try await contract.view(methodName: .getValue)
+                lblCreatedSM.text = "Створений СМ: \(String(describing: contractId)), відповідь: \(viewResult)"
+                updateAccountData()
+            } catch {
+                await MainActor.run {
+                    showAlertWithOneButton(title: "Помилка", msg: "\(error)", okHandler: { (alert) in
+                        self.dismiss(animated: true, completion: nil)
+                    })
+                }
+            }
+        }
+    }
+    
+    // Надсилання коштів методом account.sendMoney()
+    @IBAction func touchUpSendMoney(_ sender: UIButton) {
+        Task {
+            do {
+                let result = try await account.sendMoney(receiverId: recieverTextField.text!, amount: convertToYoctoNears(nears: Double(amountTextField.text!)!))
+                showAlertWithButtons(title: "Успішно", msg: "\(amountTextField.text!) NEARs успішно відправлено. Бажаєте переглянути транзакцію?", okHandler: { (alert) in
+                    if let url = URL(string: "https://explorer.testnet.near.org/transactions/\(result.transaction.hash)") {
+                        UIApplication.shared.open(url)
+                    }
+                    self.dismiss(animated: true, completion: nil)
+                })
+                updateAccountData()
+            } catch {
+                await MainActor.run {
+                    showAlertWithOneButton(title: "Помилка", msg: "\(error)", okHandler: { (alert) in
+                        self.dismiss(animated: true, completion: nil)
+                    })
+                }
+            }
         }
     }
     
@@ -38,89 +154,17 @@ class AccountVC: UIViewController {
       }
     }
     
-    func setup(near: Near, wallet: WalletAccount) {
-      self.near = near
-      walletAccount = wallet
-    }
-    
-    private func setupData(with accountState: AccountState, account: Account) async {
-        lblAccountBalance.text = try! await "Баланс профілю: \(account.getAccountBalance().available.toNearAmount(fracDigits: 5)) Ⓝ"
-        lblTotalStackedBalance.text = try! await "Стейкінг баланс: \(account.getAccountBalance().staked)"
-        
-    }
-    
-    private func fetchAccountState() async throws -> AccountState {
-        do {
-            account = try await near!.account(accountId: walletAccount!.getAccountId())
-            let state = try await account.state()
-            return state
-        } catch {
-            throw AccountError.cannotFetchAccountState
-        }
-    }
-    
-    @IBAction func touchUpMakeContractRequests(_ sender: UIButton) {
-        Task {
-            do {
-                // Генеруємо унікальний ідентифікатор СК
-                let contractId = generateUniqueString(prefix: "test_contract")
-                
-                // Створюємо ключ для підпису
-                let newPublicKey = try await near!.connection.signer.createKey(accountId: contractId, networkId: account.connection.networkId, curve: .ED25519)
-                
-                // Створюємо та деплоїмо СК, amount - вказується в yoctoNear
-                let createdContract = try await account.createAndDeployContract(contractId: contractId, publicKey: newPublicKey, data: Wasm().data.bytes, amount: UInt128(stringLiteral: "1000000000000000000000000"))
-                let options = ContractOptions(viewMethods: [.getValue, .getLastResult],
-                                              changeMethods: [.setValue,  .callPromise],
-                                              sender: nil)
-                contract = Contract(account: account, contractId: contractId, options: options)
-                
-                let result: String = try await contract.view(methodName: .hello, args: ["name": "trex"])
-                print("contract.view methodName .hello - \(result)")
-                let result2: String = try await contract.change(methodName: .setValue, args: ["value": generateUniqueString(prefix: "uniqueString")], amount: UInt128(stringLiteral: "1000000000000000000000000")) as! String
-                print("contract.view methodName .setValue - \(result2)")
-                let testSetCallValue: String = try await contract.view(methodName: .getValue)
-                print("contract.view methodName .getValue - \(testSetCallValue)")
-            } catch {
-                await MainActor.run {
-                    showAlertWithOneButton(title: "Помилка", msg: "\(error)", okHandler: { (alert) in
-                        self.dismiss(animated: true, completion: nil)
-                    })
-                }
-            }
-        }
-        // Потрібно оновити UI
-    }
-    
-    
-    @IBAction func touchUpSendMoney(_ sender: UIButton) {
-        Task {
-            do {
-                let result = try await account.sendMoney(receiverId: recieverTextField.text!, amount: UInt128(stringLiteral: amountTextField.text!))
-                showAlertWithButtons(title: "Успішно", msg: "\(amountTextField.text!) NEARs успішно відправлено. Бажаєте переглянути транзакцію?", okHandler: { (alert) in
-                    if let url = URL(string: "https://explorer.testnet.near.org/transactions/\(result.transaction.hash)") {
-                        UIApplication.shared.open(url)
-                    }
-                    self.dismiss(animated: true, completion: nil)
-                })
-            } catch {
-                await MainActor.run {
-                    showAlertWithOneButton(title: "Помилка", msg: "\(error)", okHandler: { (alert) in
-                        self.dismiss(animated: true, completion: nil)
-                    })
-                }
-            }
-        }
-    }
-    
     func generateUniqueString(prefix: String) -> String {
       var result = prefix + "-\(Int(Date().timeIntervalSince1970 * 1000))" + "-\(Int.random(in: 0..<1000000))"
       let add_symbols = max(64 - result.count, 1)
       for _ in 0..<add_symbols {
         result += "0"
       }
-
       return result
+    }
+    
+    func convertToYoctoNears(nears: Double) -> UInt2X<UInt64> {
+        return UInt2X<UInt64>(nears * 1000000000000000000000000)
     }
     
 }

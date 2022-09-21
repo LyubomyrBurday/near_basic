@@ -76,11 +76,9 @@ class LoginVC: UIViewController, WalletSignInDelegate {
           try await walletAccount?.completeSignIn(url: url)
         } catch {
           await MainActor.run {
-            let alert = UIAlertController(title: "Error", message: "\(error)", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: { [weak self] _ in
-              self?.dismiss(animated: true, completion: nil)
-            }))
-            present(alert, animated: true, completion: nil)
+              showAlertWithOneButton(title: "Помилка", msg: "\(error)", okHandler: { (alert) in
+                  self.dismiss(animated: true, completion: nil)
+              })
           }
         }
         await setupUI(with: walletAccount!)
