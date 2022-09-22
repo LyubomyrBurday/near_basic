@@ -1,10 +1,11 @@
 # Про проект
+
+Read this in other languages: [English](https://github.com/LyubomyrBurday/near_basic/blob/main/README.eng.md)
+
 Даний проект розроблений для демонстрації основних функціх та базового функціоналу [nearclientios](https://github.com/near/near-api-swift).
 Початок роботи з бібліотекою починається з створення config об'єкту та ініціалізації об'єктів типу Near та WalletAcount.
 Користувач використовує наявний аккаунт або створює новий за допомогою WebView, який реалізований в [nearclientios](https://github.com/near/near-api-swift) та отримує вище описані об'єкти з PublicKey.
 Володіючи PublicKey ми можемо використовувати та підписувати методи без необхідності додаткового підтвердження від користувача.
-
-Read this in other languages: [English](https://github.com/LyubomyrBurday/near_basic/blob/main/README.eng.md)
 
 ```swift
 private var walletAccount: WalletAccount?
