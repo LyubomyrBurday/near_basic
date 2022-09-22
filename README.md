@@ -1,7 +1,7 @@
 # Про проект
-Даний проект розроблений для демонстрації основних функціх та базового функціоналу nearclientios.
+Даний проект розроблений для демонстрації основних функціх та базового функціоналу [nearclientios](https://github.com/near/near-api-swift).
 Початок роботи з бібліотекою починається з створення config об'єкту та ініціалізації об'єктів типу Near та WalletAcount.
-Користувач використовує наявний аккаунт або створює новий за допомогою WebView, який реалізований в nearclientios та отримує вище описані об'єкти з PublicKey.
+Користувач використовує наявний аккаунт або створює новий за допомогою WebView, який реалізований в [nearclientios](https://github.com/near/near-api-swift) та отримує вище описані об'єкти з PublicKey.
 Володіючи PublicKey ми можемо використовувати та підписувати методи без необхідності додаткового підтвердження від користувача.
 
 ```swift
@@ -54,16 +54,16 @@ try await contract.change(methodName: .setValue, args: ["question": "test.testne
 Інші базові методи можна переглянути у контроллерів AccountVC.swift.
 
 # Вимоги
-nearclientios використовує iOS 13+ та Swift async/await
+[nearclientios](https://github.com/near/near-api-swift) використовує iOS 13+ та Swift async/await
 
 # Самостійне встановлення
 ## CocoaPods
-nearclientios можливо встановити за допомогою CocoaPods. Щоб встановити необхідно додати наступний рядок в Podfile.
+[nearclientios](https://github.com/near/near-api-swift) можливо встановити за допомогою CocoaPods. Щоб встановити необхідно додати наступний рядок в Podfile.
 ```swift
 pod 'nearclientios'
 ```
 ## Swift Package Manager
-nearclientios можливо встановити за допомогою Swift Package Manager додавши залежність в Package.swift.
+[nearclientios](https://github.com/near/near-api-swift) можливо встановити за допомогою Swift Package Manager додавши залежність в Package.swift.
 ```swift
 dependencies: [
   .package(url: "https://github.com/near/near-api-swift", .upToNextMajor(from: "1.0.29"))
