@@ -1,0 +1,31 @@
+/* 
+  Localizable.strings
+  NearWallet
+
+  Created by Lyubomyr Burday on 22.09.2022.
+  
+*/
+"UIAlert.Okay" = "Okay";
+"UIAlert.Review" = "Watch";
+
+"LoginVC.btnLogIn" = "+ Account Import";
+"LoginVC.alertErrorTitle" = "Error";
+
+"AccountVC.navigationTitle" = "Personal Account";
+"AccountVC.navigationBackButton" = "Exit";
+"AccountVC.lblAccountBalance" = "Account balance: ";
+"AccountVC.lblTotalStackedBalance" = "Stacked balance: ";
+
+"AccountVC.lblCreatedSM" = "Created SM: ";
+"AccountVC.lblCreatedSMadditional" = ", answer:";
+
+"AccountVC.btnCreateSM" = "Create SM and answer";
+"AccountVC.btnSendMoney" = "Send";
+
+"AccountVC.answerTextField" = "Answer";
+"AccountVC.recieverTextField" = "test.testnet";
+"AccountVC.amountTextField" = "Amount of NEAR coins";
+
+"AccountVC.alertErrorTitle" = "Error";
+"AccountVC.alertSuccessTitle" = "Success";
+"AccountVC.alertSuccessDescription" = "NEARs sent successfully. Want to view a transaction?";

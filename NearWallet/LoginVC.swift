@@ -14,6 +14,8 @@ class LoginVC: UIViewController, WalletSignInDelegate {
     private var walletAccount: WalletAccount?
     private var near: Near?
     
+    @IBOutlet weak var btnLogIn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -47,12 +49,13 @@ class LoginVC: UIViewController, WalletSignInDelegate {
     }
 
     private func setupUI(with wallet: WalletAccount) async {
+        btnLogIn.setTitle("LoginVC.btnLogIn".localized(), for: .normal)
       if await wallet.isSignedIn() {
         await MainActor.run {
             showAccountState(with: wallet)
         }
       } else {
-        // Можна ховати Loader
+        // Hide Loader
       }
     }
     
@@ -76,7 +79,7 @@ class LoginVC: UIViewController, WalletSignInDelegate {
           try await walletAccount?.completeSignIn(url: url)
         } catch {
           await MainActor.run {
-              showAlertWithOneButton(title: "Помилка", msg: "\(error)", okHandler: { (alert) in
+              showAlertWithOneButton(title: "LoginVC.alertErrorTitle".localized(), msg: "\(error)", okHandler: { (alert) in
                   self.dismiss(animated: true, completion: nil)
               })
           }

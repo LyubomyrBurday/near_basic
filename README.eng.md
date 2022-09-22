@@ -1,10 +1,10 @@
-# Про проект
-Даний проект розроблений для демонстрації основних функціх та базового функціоналу [nearclientios](https://github.com/near/near-api-swift).
-Початок роботи з бібліотекою починається з створення config об'єкту та ініціалізації об'єктів типу Near та WalletAcount.
-Користувач використовує наявний аккаунт або створює новий за допомогою WebView, який реалізований в [nearclientios](https://github.com/near/near-api-swift) та отримує вище описані об'єкти з PublicKey.
-Володіючи PublicKey ми можемо використовувати та підписувати методи без необхідності додаткового підтвердження від користувача.
+# About the project
+This project is designed to demonstrate the main functions and basic functionality of [nearclientios](https://github.com/near/near-api-swift).
+Getting started with the library begins with creating a config object and initializing Near and WalletAcount objects.
+The user uses an existing account or creates a new one using WebView, which is implemented in [nearclientios](https://github.com/near/near-api-swift) and receives the objects described above from PublicKey.
+Having the PublicKey, we can use and sign methods without the need for additional confirmation from the user.
 
-Read this in other languages: [English](https://github.com/LyubomyrBurday/near_basic/blob/main/README.eng.md)
+Read this in other languages: [Ukrainian](https://github.com/LyubomyrBurday/near_basic/blob/main/README.md)
 
 ```swift
 private var walletAccount: WalletAccount?
@@ -30,7 +30,7 @@ private func setupWallet() async -> WalletAccount {
       return try! WalletAccount(near: near!, authService: DefaultAuthService.shared)
     }
 ```
-Приклад створення смарт контракту для подальшого використання
+An example of creating a smart contract for further use
 ```swift
 private func contractSetup() async throws {
         let contractId = generateUniqueString(prefix: "test_contract")
@@ -41,7 +41,7 @@ private func contractSetup() async throws {
         contract = Contract(account: account, contractId: contractId, options: options)
     }
 ```
-Приклад використання методів account.viewFunction() та account.functionCall() для запису в смарт контракт
+An example of using the account.viewFunction() and account.functionCall() methods to write to a smart contract
 ```swift
  private func makeFunctionCallViaAccount() async throws {
         try await account.viewFunction(contractId: contractId, methodName: .hello, args: ["name": "trex"])
@@ -49,23 +49,23 @@ private func contractSetup() async throws {
         let viewResult: String = try await account.viewFunction(contractId: contractId, methodName: .getValue, args: [:])
     }
 ```
-Приклад використання методу надсилання коштів іншому користувачу
+An example of using the method of sending funds to another user
 ```swift
 try await contract.change(methodName: .setValue, args: ["question": "test.testnet" ,"value": answerTextField.text!], amount: convertToYoctoNears(nears: 1))
 ```
-Інші базові методи можна переглянути у контроллерів AccountVC.swift.
+Other base methods can be viewed in the controller AccountVC.swift.
 
-# Вимоги
-[nearclientios](https://github.com/near/near-api-swift) використовує iOS 13+ та Swift async/await
+# Requirements
+[nearclientios](https://github.com/near/near-api-swift) use iOS 13+ та Swift async/await
 
-# Самостійне встановлення
+# Self-installation
 ## CocoaPods
-[nearclientios](https://github.com/near/near-api-swift) можливо встановити за допомогою CocoaPods. Щоб встановити необхідно додати наступний рядок в Podfile.
+[nearclientios](https://github.com/near/near-api-swift) can be installed using CocoaPods. To install, you need to add the following line to the Podfile.
 ```swift
 pod 'nearclientios'
 ```
 ## Swift Package Manager
-[nearclientios](https://github.com/near/near-api-swift) можливо встановити за допомогою Swift Package Manager додавши залежність в Package.swift.
+[nearclientios](https://github.com/near/near-api-swift) it is possible to install using the Swift Package Manager by adding a dependency to Package.swift.
 ```swift
 dependencies: [
   .package(url: "https://github.com/near/near-api-swift", .upToNextMajor(from: "1.0.29"))

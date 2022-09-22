@@ -1,0 +1,31 @@
+/* 
+  Localizable.strings
+  NearWallet
+
+  Created by Lyubomyr Burday on 22.09.2022.
+  
+*/
+"UIAlert.Okay" = "Гаразд";
+"UIAlert.Review" = "Переглянути";
+
+"LoginVC.btnLogIn" = "+ Імпорт аккаунту";
+"LoginVC.alertErrorTitle" = "Помилка";
+
+"AccountVC.navigationTitle" = "Особистий профіль";
+"AccountVC.navigationBackButton" = "Вихід";
+"AccountVC.lblAccountBalance" = " Баланс профілю: ";
+"AccountVC.lblTotalStackedBalance" = "Стейкінг баланс: ";
+
+"AccountVC.lblCreatedSM" = "Створити СМ: ";
+"AccountVC.lblCreatedSMadditional" = ", відповідь:";
+
+"AccountVC.btnCreateSM" = "Створити СМ та відповісти";
+"AccountVC.btnSendMoney" = "Відправити";
+
+"AccountVC.answerTextField" = "Відповідь";
+"AccountVC.recieverTextField" = "test.testnet";
+"AccountVC.amountTextField" = "Кількість NEAR монет";
+
+"AccountVC.alertErrorTitle" = "Помилка";
+"AccountVC.alertSuccessTitle" = "Успіх";
+"AccountVC.alertSuccessDescription" = "NEARs успішно відправлено. Бажаєте переглянути транзакцію?";

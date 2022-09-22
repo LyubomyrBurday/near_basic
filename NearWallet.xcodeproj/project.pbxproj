@@ -23,6 +23,10 @@
 		C52962FB28D7C25A00DCBD0B /* AccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52962FA28D7C25A00DCBD0B /* AccountVC.swift */; };
 		C52962FD28D8660700DCBD0B /* UIAlert+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52962FC28D8660700DCBD0B /* UIAlert+Extension.swift */; };
 		C529630028D8B52200DCBD0B /* main.wasm in Resources */ = {isa = PBXBuildFile; fileRef = C52962FF28D8B52200DCBD0B /* main.wasm */; };
+		C54C675A28DCC8E600B8B6B2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C54C675828DCC8E600B8B6B2 /* README.md */; };
+		C54C675B28DCC8E600B8B6B2 /* README.eng.md in Resources */ = {isa = PBXBuildFile; fileRef = C54C675928DCC8E600B8B6B2 /* README.eng.md */; };
+		C54C676228DCCC4100B8B6B2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C54C676428DCCC4100B8B6B2 /* Localizable.strings */; };
+		C54C676828DCCCE900B8B6B2 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54C676728DCCCE900B8B6B2 /* String+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +71,13 @@
 		C52962FA28D7C25A00DCBD0B /* AccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountVC.swift; sourceTree = "<group>"; };
 		C52962FC28D8660700DCBD0B /* UIAlert+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlert+Extension.swift"; sourceTree = "<group>"; };
 		C52962FF28D8B52200DCBD0B /* main.wasm */ = {isa = PBXFileReference; lastKnownFileType = file; path = main.wasm; sourceTree = "<group>"; };
+		C54C675828DCC8E600B8B6B2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		C54C675928DCC8E600B8B6B2 /* README.eng.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.eng.md; sourceTree = SOURCE_ROOT; };
+		C54C675C28DCCB5F00B8B6B2 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Main.strings; sourceTree = "<group>"; };
+		C54C675D28DCCB5F00B8B6B2 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		C54C676328DCCC4100B8B6B2 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C54C676528DCCC4600B8B6B2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C54C676728DCCCE900B8B6B2 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		D8C5ED19E6ECA0F7F6C8B185 /* Pods-NearWallet-NearWalletUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NearWallet-NearWalletUITests.debug.xcconfig"; path = "Target Support Files/Pods-NearWallet-NearWalletUITests/Pods-NearWallet-NearWalletUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F7B4D738E8713D37A50BA635 /* Pods-NearWalletTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NearWalletTests.debug.xcconfig"; path = "Target Support Files/Pods-NearWalletTests/Pods-NearWalletTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,6 +126,7 @@
 		C52962BA28D730DC00DCBD0B = {
 			isa = PBXGroup;
 			children = (
+				C54C675728DCC8C800B8B6B2 /* Metadata */,
 				C52962C528D730DC00DCBD0B /* NearWallet */,
 				C52962DC28D730DD00DCBD0B /* NearWalletTests */,
 				C52962E628D730DD00DCBD0B /* NearWalletUITests */,
@@ -137,6 +149,8 @@
 		C52962C528D730DC00DCBD0B /* NearWallet */ = {
 			isa = PBXGroup;
 			children = (
+				C54C676628DCCCD300B8B6B2 /* Extensions */,
+				C54C675F28DCCBF800B8B6B2 /* Localization */,
 				C52962FF28D8B52200DCBD0B /* main.wasm */,
 				C52962C628D730DC00DCBD0B /* AppDelegate.swift */,
 				C52962C828D730DC00DCBD0B /* SceneDelegate.swift */,
@@ -147,7 +161,6 @@
 				C52962D428D730DD00DCBD0B /* Info.plist */,
 				C52962F628D7B6EB00DCBD0B /* AppConstants.swift */,
 				C52962FA28D7C25A00DCBD0B /* AccountVC.swift */,
-				C52962FC28D8660700DCBD0B /* UIAlert+Extension.swift */,
 			);
 			path = NearWallet;
 			sourceTree = "<group>";
@@ -167,6 +180,32 @@
 				C52962E928D730DD00DCBD0B /* NearWalletUITestsLaunchTests.swift */,
 			);
 			path = NearWalletUITests;
+			sourceTree = "<group>";
+		};
+		C54C675728DCC8C800B8B6B2 /* Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				C54C675928DCC8E600B8B6B2 /* README.eng.md */,
+				C54C675828DCC8E600B8B6B2 /* README.md */,
+			);
+			path = Metadata;
+			sourceTree = "<group>";
+		};
+		C54C675F28DCCBF800B8B6B2 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				C54C676428DCCC4100B8B6B2 /* Localizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		C54C676628DCCCD300B8B6B2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C52962FC28D8660700DCBD0B /* UIAlert+Extension.swift */,
+				C54C676728DCCCE900B8B6B2 /* String+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		CCA428FAD8C17068AF026E9C /* Frameworks */ = {
@@ -270,6 +309,7 @@
 			knownRegions = (
 				en,
 				Base,
+				uk,
 			);
 			mainGroup = C52962BA28D730DC00DCBD0B;
 			productRefGroup = C52962C428D730DC00DCBD0B /* Products */;
@@ -290,6 +330,9 @@
 			files = (
 				C529630028D8B52200DCBD0B /* main.wasm in Resources */,
 				C52962D328D730DD00DCBD0B /* LaunchScreen.storyboard in Resources */,
+				C54C675B28DCC8E600B8B6B2 /* README.eng.md in Resources */,
+				C54C676228DCCC4100B8B6B2 /* Localizable.strings in Resources */,
+				C54C675A28DCC8E600B8B6B2 /* README.md in Resources */,
 				C52962D028D730DD00DCBD0B /* Assets.xcassets in Resources */,
 				C52962CE28D730DC00DCBD0B /* Main.storyboard in Resources */,
 			);
@@ -420,6 +463,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C52962FD28D8660700DCBD0B /* UIAlert+Extension.swift in Sources */,
+				C54C676828DCCCE900B8B6B2 /* String+Extension.swift in Sources */,
 				C52962CB28D730DC00DCBD0B /* LoginVC.swift in Sources */,
 				C52962FB28D7C25A00DCBD0B /* AccountVC.swift in Sources */,
 				C52962C728D730DC00DCBD0B /* AppDelegate.swift in Sources */,
@@ -465,6 +509,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				C52962CD28D730DC00DCBD0B /* Base */,
+				C54C675C28DCCB5F00B8B6B2 /* uk */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -473,8 +518,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				C52962D228D730DD00DCBD0B /* Base */,
+				C54C675D28DCCB5F00B8B6B2 /* uk */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		C54C676428DCCC4100B8B6B2 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C54C676328DCCC4100B8B6B2 /* uk */,
+				C54C676528DCCC4600B8B6B2 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -484,6 +539,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -544,6 +600,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

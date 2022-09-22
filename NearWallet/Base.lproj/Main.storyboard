@@ -47,6 +47,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MqN-XU-1cl"/>
+                    <connections>
+                        <outlet property="btnLogIn" destination="0C1-IW-P8I" id="58Q-pX-rNK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -161,6 +164,8 @@
                     <connections>
                         <outlet property="amountTextField" destination="D8a-Qd-eQE" id="mfM-oi-vZP"/>
                         <outlet property="answerTextField" destination="SRL-Of-5PF" id="Wjo-fV-j2q"/>
+                        <outlet property="btnCreateSM" destination="4DJ-1c-VyR" id="xRj-bc-bQc"/>
+                        <outlet property="btnSendMoney" destination="ug2-XK-naE" id="ar2-f0-CTW"/>
                         <outlet property="lblAccountBalance" destination="aoF-M0-6aP" id="44T-BI-hpC"/>
                         <outlet property="lblCreatedSM" destination="PKN-Mp-T6K" id="3Cr-iI-mj0"/>
                         <outlet property="lblQuestion" destination="56p-pW-v0s" id="QMW-ya-DmA"/>

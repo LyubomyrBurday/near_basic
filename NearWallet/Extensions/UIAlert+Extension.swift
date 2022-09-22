@@ -12,10 +12,10 @@ extension UIViewController {
     
     func showAlertWithButtons(title: String, msg: String = "", okHandler:((UIAlertAction)->Void)?) {
         let alertController = UIAlertController(title: title, message: msg, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "Гаразд", style: .default, handler: { [weak self] _ in
+        alertController.addAction(UIAlertAction(title: "UIAlert.Okay".localized(), style: .default, handler: { [weak self] _ in
             self?.dismiss(animated: true, completion: nil)
           }))
-        alertController.addAction(UIAlertAction(title: "Переглянути",
+        alertController.addAction(UIAlertAction(title: "UIAlert.Review".localized(),
                                                 style: .default,
                                               handler: okHandler))
         
@@ -24,7 +24,7 @@ extension UIViewController {
     
     func showAlertWithOneButton(title: String, msg: String = "", okHandler:((UIAlertAction)->Void)?) {
         let alertController = UIAlertController(title: title, message: msg, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "Гаразд",
+        alertController.addAction(UIAlertAction(title: "UIAlert.Okay".localized(),
                                                 style: .default,
                                               handler: okHandler))
         self.present(alertController, animated: true, completion: nil)

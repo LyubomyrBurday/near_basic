@@ -1,0 +1,30 @@
+
+/* Class = "UIButton"; normalTitle = "+ Імпорт аккаунту"; ObjectID = "0C1-IW-P8I"; */
+"0C1-IW-P8I.normalTitle" = "+ Імпорт аккаунту";
+
+/* Class = "UIButton"; normalTitle = "Створити СМ та відповісти"; ObjectID = "4DJ-1c-VyR"; */
+"4DJ-1c-VyR.normalTitle" = "Створити СМ та відповісти";
+
+/* Class = "UILabel"; text = "lblQuestion"; ObjectID = "56p-pW-v0s"; */
+"56p-pW-v0s.text" = "lblQuestion";
+
+/* Class = "UITextField"; placeholder = "Кількість NEAR монет"; ObjectID = "D8a-Qd-eQE"; */
+"D8a-Qd-eQE.placeholder" = "Кількість NEAR монет";
+
+/* Class = "UILabel"; text = "lblTotalStackedBalance"; ObjectID = "Ehf-R5-MT4"; */
+"Ehf-R5-MT4.text" = "lblTotalStackedBalance";
+
+/* Class = "UITextField"; placeholder = "Відповідь"; ObjectID = "SRL-Of-5PF"; */
+"SRL-Of-5PF.placeholder" = "Відповідь";
+
+/* Class = "UILabel"; text = "lblAccountBalance"; ObjectID = "aoF-M0-6aP"; */
+"aoF-M0-6aP.text" = "lblAccountBalance";
+
+/* Class = "UITextField"; placeholder = "test.testnet"; ObjectID = "keQ-dA-jJc"; */
+"keQ-dA-jJc.placeholder" = "test.testnet";
+
+/* Class = "UIViewController"; title = "Особистий профіль"; ObjectID = "pCL-GJ-pvt"; */
+"pCL-GJ-pvt.title" = "Особистий профіль";
+
+/* Class = "UIButton"; normalTitle = "Відправити"; ObjectID = "ug2-XK-naE"; */
+"ug2-XK-naE.normalTitle" = "Відправити";
